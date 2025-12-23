@@ -88,13 +88,14 @@ ol {
   height: 298px;
   overflow-y: auto;
   position: relative;
-  overflow-y: auto;
   display: flex;
   flex-direction: column;
+  padding: 2px;
   gap: 30px;
 }
 
 .result__video-container {
+  position: relative;
   width: 711px;
   height: 386px;
   margin-bottom: 16px;
@@ -110,17 +111,20 @@ ol {
 .content__list {
   display: flex;
   flex-direction: column;
-  gap: 23px;
+  gap: 30px;
+  position: relative;
 }
 
 .content__video-card {
   display: flex;
   align-items: flex-start;
+  height: 103px;
 }
 
 .content__video-card-thumbnail {
   min-width: 194px;
-  max-width: 103px;
+  max-height: 103px;
+  flex-shrink: 0;
   object-fit: cover;
   object-position: center;
 }
@@ -130,6 +134,8 @@ ol {
   display: flex;
   flex-direction: column;
   min-width: 0;
+  overflow: hidden;
+  position: relative;
 }
 
 .search-form__fieldset-title {
@@ -147,7 +153,6 @@ ol {
   font-style: normal;
   text-transform: uppercase;
   padding-bottom: 21px;
-  padding-top: 85px;
   line-height: 94%
 }
 
@@ -160,6 +165,7 @@ ol {
   display: block;
   text-decoration: none;
   color: #FFFFFF;
+
 }
 
 .content__video-card-title {
@@ -302,7 +308,7 @@ ol {
   background-color: transparent; 
   font-family: 'Fira Sans Condensed', sans-serif; 
   font-size: 18px;
-  font-weight: 400;
+  font-weight: 700;
   cursor: pointer;
   padding: 0;
   text-align: center;
@@ -323,22 +329,21 @@ ol {
   outline: none;          
 }
 
-.search-form__submit-button:focus-visible {
+.button:focus-visible {
   outline: 1px solid #fff;
   outline-offset: 2px;
 }
 
 .search-form__submit-button {
-  padding-top: 9px 12px;
   height: 34px;
   align-self: flex-end;
 }
 
 .more-button {
   padding: 7px 24px;
-  width: 100%;
+  width: calc(100% - 6px);
   box-sizing: border-box;
-  border: 1px solid #fff;
+  margin: auto;
 }
 
 .content__card-link_current {
@@ -363,6 +368,6 @@ ol {
 }
 
 .content__list-item {
-  padding: 3px;
-  height: 103px;
+  padding-left: 3px;
+  padding-right: 3px;
 }
